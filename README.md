@@ -1,2 +1,2 @@
 # nilog
-A fork of Go's standard log library, modified to allow for (*Logger)(nil).
+This is just a wrapping/modification of Go's standard `log` library that allows for `(*Logger)(nil)`.

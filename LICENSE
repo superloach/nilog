@@ -1,4 +1,5 @@
-This is just a modification of Go's log library. Use it as you like. Go's LICENSE follows:
+This is just a wrapping/modification of Go's log library. Use it as
+you like. Go's LICENSE follows:
 
 Copyright (c) 2009 The Go Authors. All rights reserved.
 

@@ -13,146 +13,146 @@ func New(out io.Writer, prefix string, flag int) *Logger {
 	return (*Logger)(log.New(out, prefix, flag))
 }
 
-// Fatal wraps (*l).Fatal, returning early if l is nil.
+// Fatal wraps (*log.Logger)(l).Fatal, returning early if l is nil.
 func (l *Logger) Fatal(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Fatal(v...)
+	(*log.Logger)(l).Fatal(v...)
 }
 
-// Fatalf wraps (*l).Fatalf, returning early if l is nil.
+// Fatalf wraps (*log.Logger)(l).Fatalf, returning early if l is nil.
 func (l *Logger) Fatalf(format string, v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Fatalf(format, v...)
+	(*log.Logger)(l).Fatalf(format, v...)
 }
 
-// Fatalln wraps (*l).Fatalln, returning early if l is nil.
+// Fatalln wraps (*log.Logger)(l).Fatalln, returning early if l is nil.
 func (l *Logger) Fatalln(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Fatalln(v...)
+	(*log.Logger)(l).Fatalln(v...)
 }
 
-// Flags wraps (*l).Flags, returning early if l is nil.
+// Flags wraps (*log.Logger)(l).Flags, returning early if l is nil.
 func (l *Logger) Flags() int {
 	if l == nil {
 		return -1
 	}
 
-	return (*l).Flags()
+	return (*log.Logger)(l).Flags()
 }
 
-// Output wraps (*l).Output, returning early if l is nil.
+// Output wraps (*log.Logger)(l).Output, returning early if l is nil.
 func (l *Logger) Output(calldepth int, s string) error {
 	if l == nil {
 		return nil
 	}
 
-	return (*l).Output(calldepth, s)
+	return (*log.Logger)(l).Output(calldepth, s)
 }
 
-// Panic wraps (*l).Panic, returning early if l is nil.
+// Panic wraps (*log.Logger)(l).Panic, returning early if l is nil.
 func (l *Logger) Panic(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Panic(v...)
+	(*log.Logger)(l).Panic(v...)
 }
 
-// Panicf wraps (*l).Panicf, returning early if l is nil.
+// Panicf wraps (*log.Logger)(l).Panicf, returning early if l is nil.
 func (l *Logger) Panicf(format string, v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Panicf(format, v...)
+	(*log.Logger)(l).Panicf(format, v...)
 }
 
-// Panicln wraps (*l).Panicln, returning early if l is nil.
+// Panicln wraps (*log.Logger)(l).Panicln, returning early if l is nil.
 func (l *Logger) Panicln(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Panicln(v...)
+	(*log.Logger)(l).Panicln(v...)
 }
 
-// Prefix wraps (*l).Prefix, returning early if l is nil.
+// Prefix wraps (*log.Logger)(l).Prefix, returning early if l is nil.
 func (l *Logger) Prefix() string {
 	if l == nil {
 		return ""
 	}
 
-	return (*l).Prefix()
+	return (*log.Logger)(l).Prefix()
 }
 
-// Print wraps (*l).Print, returning early if l is nil.
+// Print wraps (*log.Logger)(l).Print, returning early if l is nil.
 func (l *Logger) Print(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Print(v...)
+	(*log.Logger)(l).Print(v...)
 }
 
-// Printf wraps (*l).Printf, returning early if l is nil.
+// Printf wraps (*log.Logger)(l).Printf, returning early if l is nil.
 func (l *Logger) Printf(format string, v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Printf(format, v...)
+	(*log.Logger)(l).Printf(format, v...)
 }
 
-// Println wraps (*l).Println, returning early if l is nil.
+// Println wraps (*log.Logger)(l).Println, returning early if l is nil.
 func (l *Logger) Println(v ...interface{}) {
 	if l == nil {
 		return
 	}
 
-	(*l).Println(v...)
+	(*log.Logger)(l).Println(v...)
 }
 
-// SetFlags wraps (*l).SetFlags, returning early if l is nil.
+// SetFlags wraps (*log.Logger)(l).SetFlags, returning early if l is nil.
 func (l *Logger) SetFlags(flag int) {
 	if l == nil {
 		return
 	}
 
-	(*l).SetFlags(flag)
+	(*log.Logger)(l).SetFlags(flag)
 }
 
-// SetOutput wraps (*l).SetOutput, returning early if l is nil.
+// SetOutput wraps (*log.Logger)(l).SetOutput, returning early if l is nil.
 func (l *Logger) SetOutput(w io.Writer) {
 	if l == nil {
 		return
 	}
 
-	(*l).SetOutput(w)
+	(*log.Logger)(l).SetOutput(w)
 }
 
-// SetPrefix wraps (*l).SetPrefix, returning early if l is nil.
+// SetPrefix wraps (*log.Logger)(l).SetPrefix, returning early if l is nil.
 func (l *Logger) SetPrefix(prefix string) {
 	if l == nil {
 		return
 	}
 
-	(*l).SetPrefix(prefix)
+	(*log.Logger)(l).SetPrefix(prefix)
 }
 
-// Writer wraps (*l).Writer, returning early if l is nil.
+// Writer wraps (*log.Logger)(l).Writer, returning early if l is nil.
 func (l *Logger) Writer() io.Writer {
 	if l == nil {
 		return nil
 	}
 
-	return (*l).Writer()
+	return (*log.Logger)(l).Writer()
 }
