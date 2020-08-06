@@ -1,3 +1,4 @@
+// Package nilog provides a wrapper for log.Logger, making a nil value a no-op.
 package nilog
 
 import (
@@ -5,7 +6,7 @@ import (
 	"log"
 )
 
-// Logger wraps *log.Logger, making a nil value a no-op.
+// Logger wraps log.Logger, making a nil value a no-op.
 type Logger log.Logger
 
 // New wraps log.New into a Logger.
